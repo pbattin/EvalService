@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="EvalServiceCloud" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="5" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="WCFServiceWebRole1">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=evalserviceapp;AccountKey=$(_evalserviceapp.key_)" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="preston" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBn4Lh7fABCWQpa7lCnDQc8wDQYJKoZIhvcNAQEBBQAEggEATSgHCkocD5ed64az7X1KxlI5ADoqXU8vMz04ZkcPLhwhOt9nyzukjro3ydPAZdpkyt1cbJAhh2ALWikZu66MUoRIj/EJNBS8h3wJ106xuYBcrfZS0njIVI3cGl7Eb2/eHRKhIyqL5stQwiHUGC+oFXFJWjsQByJUig9K4pThb+b6+mfRrWlLF2sfBfZyEOzBU6MhBArcso2ToI/vGSRD3ghjeHWUfxC7rNryl8q5nozbY6eUGFGNNzVgi6GCbBeuIv6C6ByczrLToNIzYBHIclntTGVW2LKqhnCgti6PD3xAR5iruXgBMIhTw63RmpIryt/yq9AmnKFimop5Qb7z1TAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECKokbs91GNL5gBByr6dohgkBsoM76rIbmMyr" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2019-02-07T23:59:59.0000000-05:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="a831a4b0-ed92-49bd-97a4-0284becb62c9" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="9C1806B4D781CA38BA521DBE081AA3CD1A71BA01" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>
